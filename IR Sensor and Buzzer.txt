@@ -1,0 +1,24 @@
+int irSensor = 12; 
+int buzzer = 7; 
+void setup() { 
+Serial.begin(9600); 
+pinMode(irSensor, INPUT); 
+pinMode(buzzer, OUTPUT); 
+// put your setup code here, to run once: 
+} 
+void loop() { 
+int value=digitalRead(irSensor); 
+Serial.println(""); 
+Serial.println("Sensor value = "); 
+Serial.println(value); 
+if (value == 0) 
+{ 
+digitalWrite(buzzer,HIGH); 
+} 
+else 
+{ 
+digitalWrite(buzzer,LOW) 
+} 
+delay(50); 
+// put your main code here, to run repeatedly: 
+} 
